@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Impacto del Comercio Informal — Mercado de Lorica</title>
+  <meta name="description" content="Proyecto sobre el impacto del comercio informal en Lorica, Córdoba.">
+  <style>
+    :root{
+      --bg:#071220; --card:#0b1624; --accent:#ffd166; --muted:#9fb0c8;
+      --glass:rgba(255,255,255,0.03); --radius:14px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;padding:28px;
+      background:linear-gradient(180deg,#07122a 0%, #081833 100%);
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      color:#e6eef8;-webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,#0f2740,#08324a);
+          display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);
+          font-size:20px;box-shadow:0 8px 36px rgba(0,0,0,0.5)}
+    h1{margin:0;font-size:18px}
+    .subtitle{color:var(--muted);font-size:13px;margin-top:3px}
+    nav{display:flex;gap:8px;flex-wrap:wrap;margin-left:12px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:700;padding:8px;border-radius:8px}
+    nav a:hover{color:var(--accent)}
+    main{display:grid;grid-template-columns:1fr 300px;gap:18px}
+    @media (max-width:980px){main{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+          padding:18px;border-radius:14px;box-shadow:0 10px 40px rgba(2,6,23,0.6);
+          border:1px solid rgba(255,255,255,0.03)}
+    h2{margin:0;font-size:16px}
+    p.lead{color:var(--muted);margin-top:8px}
+    ul{padding-left:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:700px){.grid-2{grid-template-columns:1fr}}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+    @media (max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .thumb{border-radius:10px;overflow:hidden;height:120px;background:#021226;display:flex;align-items:center;justify-content:center}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .acc-item{border-radius:10px;overflow:hidden;margin-bottom:8px;border:1px solid rgba(255,255,255,0.03)}
+    .acc-head{display:flex;justify-content:space-between;align-items:center;padding:12px;background:rgba(255,255,255,0.01);cursor:pointer}
+    .acc-body{padding:12px;background:linear-gradient(180deg,rgba(255,255,255,0.007),transparent);display:none}
+    .acc-body.open{display:block}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    .btn{background:var(--accent);color:#04263a;border:0;padding:9px 12px;border-radius:10px;cursor:pointer;font-weight:700}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    aside .card ul{list-style:none;padding:0;margin:0}
+    aside .card ul li{margin:6px 0}
+    aside .card ul a{color:var(--muted);text-decoration:none;font-weight:600}
+    aside .card ul a:hover{color:var(--accent)}
+    .fotos-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;            /* espacio entre fotos */
+  margin-top: 30px;     /* las baja más */
+}
+
+.fotos-vertical img {
+  width: 130px;         /* más grandes */
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd166; /* borde un poquito más grueso */
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display:flex;align-items:center">
+        <div class="brand">
+          <div class="logo">LC</div>
+          <div>
+            <h1>Impacto del Comercio Informal</h1>
+            <div class="subtitle">Mercado de Lorica</div>
+          </div>
+        </div>
+        <nav style="margin-left:18px">
+          <a href="#nombre">Nombre</a>
+          <a href="#resumen">Resumen</a>
+          <a href="#planteamiento">Planteamiento</a>
+          <a href="#metodologia">Metodología</a>
+          <a href="#conclusiones">Conclusiones</a>
+          <a href="#galeria">Galería</a>
+          <a href="#autores">Autores</a>
+        </nav>
+      </div>
+      <button class="btn secondary" onclick="window.print()">Imprimir</button>
+      
+    </header>
+
+    <main>
+      <div>
+        <section id="nombre" class="card" style="margin-bottom:12px">
+          <h2>1 — Nombre del proyecto</h2>
+          <p class="lead">Impacto del comercio informal en la competitividad y distribución del espacio público en el mercado de Lorica, Córdoba.</p>
+        </section>
+
+        <section id="resumen" class="card">
+          <h2>2 — Resumen</h2>
+          <p class="lead">
+            El presente estudio tuvo como propósito analizar el impacto que generan las ventas informales en la competitividad y en la distribución del espacio público en el mercado de Lorica, Córdoba. A través de entrevistas realizadas a vendedores formales, informales y clientes, se recopiló información relevante sobre la situación económica y social de las personas que trabajan o frecuentan el mercado. Los resultados evidencian que las ventas informales influyen significativamente en la movilidad y en la dinámica comercial del lugar, generando tanto ventajas económicas como conflictos en el uso del espacio público. identificaron motivaciones, conflictos y propuestas de intervención que incluyen zonas designadas para la venta, procesos progresivos de formalización y capacitación para mejorar la convivencia urbana.
+          </p>
+        </section>
+
+        <section id="planteamiento" class="card" style="margin-top:12px">
+          <h2>3 — Planteamiento del problema</h2>
+          <p class="lead">
+            En el mercado de Lorica, Córdoba, el comercio informal se ha convertido en una práctica común que afecta la movilidad, la organización y la competitividad del espacio público. Los vendedores informales ocupan zonas destinadas al tránsito peatonal y vehicular, lo que genera congestión, desorden y competencia desigual con los comerciantes formales. Este problema refleja la falta de regulación y de oportunidades laborales, lo que obliga a muchas personas a recurrir a la venta informal como medio de subsistencia
+          </p>
+          <div style="margin-top:15px">
+            <h3 style="margin-bottom:8px">Ubicación — Mercado de Lorica</h3>
+            <iframe 
+              src="https://www.google.com/maps?q=Lorica+Córdoba&output=embed"
+              width="100%" height="350" style="border:0;border-radius:10px;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </section>
+
+        <section id="metodologia" class="card" style="margin-top:12px">
+          <h2>4 — Metodología</h2>
+          <div class="grid-2">
+            <div>
+              <h3 style="margin:0 0 8px 0">Enfoque</h3>
+              <p class="lead">Cualitativo y descriptivo. Recolección de datos mediante entrevistas semiestructuradas y observación directa en el mercado.</p>
+            </div>
+            <div>
+              <h3 style="margin:0 0 8px 0">Muestra y técnicas</h3>
+              <ul class="lead">
+                <li>Entrevistas a vendedores formales, informales y clientes.</li>
+                <li>Observación de la ocupación del espacio público.</li>
+                <li>Codificación cualitativa de respuestas y síntesis temática.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="acc-item">
+              <div class="acc-head" onclick="toggleBody(this)">
+                <strong>Resultados de las entrevistas (clic para ver)</strong>
+                <span class="lead" style="font-size:13px;color:var(--muted)">Resumen general</span>
+              </div>
+              <div class="acc-body">
+                <p class="lead">"La falta de empleo nos obliga a salir a las calles a vender..." — vendedor informal.</p>
+                <p class="lead">"Los informales bajan los precios y a veces nos afecta, pero también les entendemos" — vendedor formal.</p>
+                <p class="lead">"Prefiero comprar donde me sea más barato y accesible" — cliente.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="conclusiones" class="card" style="margin-top:12px">
+          <h2>5 — Conclusiones</h2>
+          <ol class="lead">
+            <li>El comercio informal afecta la movilidad y la distribución del espacio público en el mercado.</li>
+            <li>Existe una tensión entre la supervivencia económica de vendedores informales y la formalidad exigida a comerciantes establecidos.</li>
+            <li>Se recomiendan políticas participativas: zonas de venta reguladas, programas de formalización, capacitación y alternativas de empleo.</li>
+            <li>Las soluciones coercitivas no son sostenibles; se proponen procesos progresivos y dialogados.</li>
+          </ol>
+        </section>
+
+        <section id="galeria" class="card" style="margin-top:12px">
+          <h2>6 — Galería de imágenes</h2>
+          <p class="lead">Imágenes del mercado y observaciones de campo.</p>
+          <div class="gallery" style="margin-top:10px">
+  <div class="thumb"><img src="img/foto1.jpg.jpeg"></div>
+  <div class="thumb"><img src="img/foto2.jpg.jpeg"></div>
+  <div class="thumb"><img src="img/foto3.jpg.jpeg"></div>
+  <div class="thumb"><img src="img/foto4.jpg.jpeg"></div>
+  <div class="thumb"><img src="img/foto5.jpg.jpeg"></div>
+  <div class="thumb"><img src="img/foto6.jpg.jpeg"></div>
+</div>
+        </section>
+
+        <section id="autores" class="card" style="margin-top:12px">
+          <h2>7 — Autores</h2>
+          <p class="lead"><strong>Equipo:</strong> Sebastián Morales, Cielo Ramírez y Luis Sebastián.</p>
+          <p class="lead">Institución: Colegio / Grupo 11-02. Año: 2025.</p>
+        </section>
+
+
+      </div>
+
+      <!-- barra lateral de navegación -->
+      <aside>
+        <div class="card">
+          <h3 style="margin:0 0 8px 0">Índice de navegación</h3>
+          <ul>
+            <li><a href="#nombre">1. Nombre del proyecto</a></li>
+            <li><a href="#resumen">2. Resumen</a></li>
+            <li><a href="#planteamiento">3. Planteamiento del problema</a></li>
+            <li><a href="#metodologia">4. Metodología</a></li>
+            <li><a href="#conclusiones">5. Conclusiones</a></li>
+            <li><a href="#galeria">6. Galería</a></li>
+            <li><a href="#autores">7. Autores</a></li>
+          </ul>
+        </div>
+        <!-- fotos debajo del índice -->
+  <div class="card" style="margin-top:15px; text-align:center;">
+    <h3 style="color:#ffd166;">Imágenes del Mercado</h3>
+    <div class="fotos-vertical">
+      <img src="img/WhatsApp Image 2025-10-25 at 3.05.32 PM.jpeg" alt="Foto del mercado">
+      <img src="img/WhatsApp Image 2025-10-25 at 3.16.30 PM.jpeg" alt="Foto del mercado">
+      <img src="img/WhatsApp Image 2025-10-25 at 3.16.36 PM (1).jpeg" alt="Foto del mercado">
+      <img src="img/WhatsApp Image 2025-10-25 at 3.16.43 PM.jpeg" alt="Foto del mercado">
+    </div>
+  </div>
+
+
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    function toggleBody(head){
+      const body=head.nextElementSibling;
+      body.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
+
